@@ -16,6 +16,9 @@
         }
     }
     .question {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
         .response{
 
             margin-top: 200px;
@@ -29,19 +32,23 @@
             }
         }
         }
-        
+       &._0{
+        display: block ;
+        visibility: visible ;
+        opacity: 1 ;
+    } 
     }
-    ._1{
+    .resultat {
         display: none;
         visibility: hidden;
         opacity: 0;
-        transition: all 1.5s linear;
     }
 }
 .fadeIn {
     animation: fadeIn 250ms ease-in;
 
 }
+
 @keyframes fadeIn {
     0%{
         opacity: 0;
