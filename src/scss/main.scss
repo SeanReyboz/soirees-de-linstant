@@ -9,3 +9,11 @@
 // Pages
 @import "./pages/choice";
 @import "./pages/InstantHouse";
+@import "./pages/defi";
+
+// Size wrap
+body {
+  display: flex;
+  width: 1131px;
+  margin: auto;
+}
