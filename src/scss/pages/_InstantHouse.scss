@@ -1,3 +1,53 @@
 .InstantHouse {
+    font-family: "caviar", sans-serif;
+    max-width: 904px;
+    .heading {
+        font-size: $h1;
+        text-transform: capitalize;
+        div {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .underline{
+            background-color: $color-gray;
+            min-height: 9px;
+            opacity: 75%;
+        }
+    }
+    .question {
+        .response{
+
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-around;
+            P{ 
+                cursor: pointer;
+                background-color: grey;
+            &:hover {
+                background-color: blanchedalmond;
+            }
+        }
+        }
+        
+    }
+    ._1{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.5s linear;
+    }
+}
+.fadeIn {
+    animation: fadeIn 250ms ease-in;
+
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
     
 }
