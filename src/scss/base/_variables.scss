@@ -1,2 +1,29 @@
+// Couleurs
 $color-base: #ed0202;
 $color-gray: #c4c4c4;
+
+// Font
+@font-face {
+  font-family: caviar;
+  src: url("../../font/CaviarDreams.ttf") format("truetype");
+}
+@font-face {
+  font-family: caviarbold;
+  src: url("../../font/CaviarDreams_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: caviarboldi;
+  src: url("../../font/CaviarDreams_BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: caviari;
+  src: url("../../font/CaviarDreams_Italic.ttf") format("truetype");
+}
+
+// Text format
+$h1: 36px;
+$h2: 20px;
+$p-bold: 26px;
+$p: 24px;
+$nav: 14px;
+$legende: 12px;
