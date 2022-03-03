@@ -18,6 +18,7 @@ $(document).ready(function () {
 
         var getClass = this.className;
         response.push(getClass.substring(8, 10));
+
         console.log(response);
         $("._" + question_number).css({
             display: "block",

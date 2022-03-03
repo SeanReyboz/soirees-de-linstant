@@ -1,6 +1,6 @@
 .InstantHouse {
     font-family: "caviar", sans-serif;
-    max-width: 904px;
+    display: block;
     .heading {
         font-size: $h1;
         text-transform: capitalize;
@@ -13,6 +13,7 @@
             background-color: $color-gray;
             min-height: 9px;
             opacity: 75%;
+            margin-bottom: 150px;
         }
     }
     .question {
@@ -22,11 +23,13 @@
         .response{
 
             margin-top: 200px;
+            
             display: flex;
             justify-content: space-around;
             P{ 
                 cursor: pointer;
                 background-color: grey;
+                margin: 25px;
             &:hover {
                 background-color: blanchedalmond;
             }
