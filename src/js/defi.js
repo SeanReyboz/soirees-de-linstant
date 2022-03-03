@@ -9,22 +9,19 @@ var done = 0; //Variable pour validation si la roulette à déjà été lancé o
 
 //Liste des défis
 var defis = [
-  "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "8 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "9 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "11 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "12 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "13 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "14 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "15 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
-  "16 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "1 - Fait ce qu'il te plait avec un accent (suisse, québécois, en yaourt…)",
+  "2 - Fait ce qu'il te plait en improvisation avec mots ou thème imposés",
+  "3 - Fait ce qu'il te plait dans un temps limité (par exemple : en 1 minute 30)",
+  "4 - Fait ce qu'il te plait avec quelqu'un du public.",
+  "5 - Fait ce qu'il te plait avec musiciens/artistes imposés",
+  "6 - Fait ce qu'il te plait avec tout le monde",
+  "7 - Fait ce qu'il te plait dans un style imposé",
+  "8 - Fait ce qu'il te plait en faisant un medley, un mélange, un mashup",
+  "9 - Fait ce qu'il te plait avec un objet",
+  "10 - Fait ce qu'il te plait avec une contrainte temporelle (par exemple : à l’envers, en accélérant)",
+  "11 - Fait ce qu'il te plait avec une contrainte spatiale (par exemple : à l’envers, en se déplaçant)",
+  "12 - Fait ce qu'il te plait sur plusieurs instruments / dans plusieurs discipline",
+  "13 - Fait ce qu'il te plait en mode chorale/a cappella",
 ];
 
 /**************** Apparitions ****************/
