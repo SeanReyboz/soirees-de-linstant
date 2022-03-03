@@ -1,0 +1,49 @@
+/*Basics*/
+a {
+  width: auto;
+  display: block;
+}
+/*Classes*/
+.main {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  /*all cards*/
+  .c1 {
+    transform: rotate(-25.64deg);
+  }
+  .c2 {
+    transform: rotate(-10.93deg);
+  }
+  .c3 {
+    transform: rotate(0.37deg);
+  }
+  .c4 {
+    transform: rotate(5.26deg);
+  }
+  .c5 {
+    transform: rotate(10.14deg);
+  }
+  .c6 {
+    transform: rotate(15.15deg);
+  }
+}
+.carte {
+  margin-right: -100px;
+  transition: transform 0.2s ease-in-out;
+}
+.carte:hover {
+  transform: translateY(-60px);
+}
+.translate {
+  animation: translate 500ms ease-out;
+  transform: translate(50vw, 40vh) scale(2);
+}
+@keyframes translate {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(50vw, 40vh) scale(2);
+  }
+}
