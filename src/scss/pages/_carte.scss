@@ -14,6 +14,8 @@
     .c1 {
       transform: translateY(90px) rotate(-25.64deg);
       z-index: 1;
+    }
+    .hoverc1 {
       &:hover {
         transform: translateY(-100px) rotate(-25.64deg);
         z-index: 10;
@@ -22,6 +24,8 @@
     .c2 {
       z-index: 2;
       transform: translateY(40px) rotate(-10.93deg);
+    }
+    .hoverc2 {
       &:hover {
         transform: translateY(-100px) rotate(-10.93deg);
         z-index: 10;
@@ -30,6 +34,8 @@
     .c3 {
       z-index: 3;
       transform: translateY(10px) rotate(0.37deg);
+    }
+    .hoverc3 {
       &:hover {
         transform: translateY(-100px) rotate(0.37deg);
         z-index: 10;
@@ -38,6 +44,8 @@
     .c4 {
       z-index: 4;
       transform: translateY(10px) rotate(5.26deg);
+    }
+    .hoverc4 {
       &:hover {
         transform: translateY(-100px) rotate(5.26deg);
         z-index: 10;
@@ -46,6 +54,8 @@
     .c5 {
       z-index: 5;
       transform: translateY(40px) rotate(10.14deg);
+    }
+    .hoverc5 {
       &:hover {
         transform: translateY(-100px) rotate(10.14deg);
         z-index: 10;
@@ -54,6 +64,8 @@
     .c6 {
       z-index: 6;
       transform: translateY(90px) rotate(15.15deg);
+    }
+    .hoverc6 {
       &:hover {
         transform: translateY(-100px) rotate(15.15deg);
         z-index: 10;
@@ -63,18 +75,6 @@
   .carte {
     margin-right: -100px;
     transition: transform 0.2s ease-in-out;
-  }
-
-  .translate {
-    animation: translate 500ms ease-out;
-    transform: translate(50vw, 40vh) scale(2);
-  }
-  @keyframes translate {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    100% {
-      transform: translate(50vw, 40vh) scale(2);
-    }
+    height: 443px;
   }
 }
