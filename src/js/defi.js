@@ -1,3 +1,34 @@
+/*
+//Tirage random en 1 et 10 tour précisément
+var tour = 360 * (Math.floor(Math.random() * 10) + 1);
+*/
+window.onbeforeunload = function () {
+  alert("Are you really want to perform the action?");
+};
+var done = 0; //Variable pour validation si la roulette à déjà été lancé ou pas
+
+//Liste des défis
+var defis = [
+  "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "8 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "9 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "11 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "12 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "13 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "14 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "15 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+  "16 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget.",
+];
+
+/**************** Apparitions ****************/
+
 //Apparition carte
 gsap.to(".card", { duration: 1.2, x: 0, opacity: 1, ease: "back", delay: 1 });
 
@@ -11,7 +42,7 @@ gsap.to(".roue", {
 });
 
 //Apparition bouton
-gsap.to(".static", {
+gsap.to(".seldefi", {
   duration: 1.2,
   x: 0,
   opacity: 1,
@@ -19,32 +50,82 @@ gsap.to(".static", {
   delay: 1.4,
 });
 
+/**************** Lancement roulette + défi ****************/
+
 document.querySelector(".select").addEventListener("click", function () {
+  //Remise à 0 de la roulette
   gsap.to(".roulette", {
     duration: 0.01,
     rotation: 0,
-    /*ease: CustomEase.create(
-          "custom",
-          "M0,0,C0,0,0.05,0.228,0.09,0.373,0.12,0.484,0.139,0.547,0.18,0.654,0.211,0.737,0.235,0.785,0.275,0.864,0.291,0.896,0.303,0.915,0.325,0.944,0.344,0.97,0.356,0.989,0.38,1.009,0.413,1.039,0.441,1.058,0.48,1.08,0.496,1.089,0.51,1.091,0.53,1.095,0.552,1.099,0.669,1.035,0.692,1.034,0.725,1.031,0.77,1.079,0.804,1.07,0.882,1.042,0.868,1.044,0.91,1.011,0.944,1,1,1,1,1"
-        ),*/
-    ease: "back",
-  });
-  /*
-  //Tirage random en 1 et 10 tour précisément
-  var tour = 360 * (Math.floor(Math.random() * 10) + 1);
-  */
 
-  //Tirage random en 360 degres et 3600 degres
-  var tour = Math.floor(Math.random() * 3600) + 360;
-  console.log(tour);
-  gsap.to(".roulette", {
-    duration: 6,
-    rotation: tour,
-    /*ease: CustomEase.create(
-      "custom",
-      "M0,0,C0,0,0.05,0.228,0.09,0.373,0.12,0.484,0.139,0.547,0.18,0.654,0.211,0.737,0.235,0.785,0.275,0.864,0.291,0.896,0.303,0.915,0.325,0.944,0.344,0.97,0.356,0.989,0.38,1.009,0.413,1.039,0.441,1.058,0.48,1.08,0.496,1.089,0.51,1.091,0.53,1.095,0.552,1.099,0.669,1.035,0.692,1.034,0.725,1.031,0.77,1.079,0.804,1.07,0.882,1.042,0.868,1.044,0.91,1.011,0.944,1,1,1,1,1"
-    ),*/
     ease: "back",
-    delay: 0.8,
   });
+
+  //Vérification si la roulette à déjà été lancé
+  if (done == 0) {
+    //Tirage random en 360 degres et 3600 degres
+    var tour = Math.floor(Math.random() * 3600) + 360;
+    //Tirage random du défi qui apparaitras
+    var defi = Math.floor(Math.random() * (defis.length - 1));
+    document.querySelector(".content-defi").innerHTML = defis[defi];
+    gsap.to(".roulette", {
+      duration: 6,
+      rotation: tour,
+      ease: "back",
+      delay: 0.8,
+    });
+    gsap.to(".roue", {
+      duration: 2,
+      x: -424,
+      ease: "expo",
+      delay: 8,
+    });
+    gsap.to(".seldefi", {
+      duration: 2,
+      x: -424,
+      ease: "expo",
+      delay: 8,
+    });
+    gsap.to(".static", {
+      duration: 2,
+      opacity: 0,
+      ease: "expo",
+      delay: 8,
+    });
+    gsap.to(".defi", {
+      duration: 2,
+      opacity: 1,
+      ease: "expo",
+      delay: 8,
+    });
+
+    done = 1;
+  } else if (done == 1) {
+    //Tirage random en 360 degres et 3600 degres
+    var tour = Math.floor(Math.random() * 3600) + 360;
+    //Tirage random du défi qui apparaitras
+    var defi = Math.floor(Math.random() * (defis.length - 1));
+
+    gsap.to(".roulette", {
+      duration: 6,
+      rotation: tour,
+      ease: "back",
+      delay: 0.8,
+    });
+    gsap.to(".defi", {
+      duration: 2,
+      opacity: 0,
+      ease: "expo",
+      delay: 0.8,
+    });
+    setTimeout(() => {
+      document.querySelector(".content-defi").innerHTML = defis[defi];
+    }, 2900);
+    gsap.to(".defi", {
+      duration: 2,
+      opacity: 1,
+      ease: "expo",
+      delay: 6.8,
+    });
+  }
 });

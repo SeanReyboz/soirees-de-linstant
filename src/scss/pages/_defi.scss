@@ -1,52 +1,74 @@
 .defis {
   display: flex;
-  flex-direction: column;
+  margin: auto;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 691px;
-  .dynamic {
+  .static {
     display: flex;
     justify-content: space-between;
-    width: 691px;
+
     .card {
       width: 220px;
       transform: translateX(-500px);
       opacity: 0;
     }
+  }
+  .dynamic {
+    //Pour animation js
+    width: 350px;
+    .seldefi {
+      transform: translateX(-1000px);
+      opacity: 0;
+      .select {
+        //Style
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-base;
+        margin-top: 58px;
+        width: 350px;
+        height: 50px;
+        font-family: "caviar", sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: $p;
+        text-decoration: none;
+        cursor: pointer;
+        animation-name: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        &:hover {
+          transform: translateX(15px);
+        }
+      }
+    }
     .roue {
       transform: translateX(-800px);
       opacity: 0;
       position: relative;
+      width: 350px;
       .pique {
         position: absolute;
         transform: translate(205%, -241%);
       }
     }
   }
-  .static {
-    //Pour animation js
-    transform: translateX(-1000px);
+  .defi {
+    transform: translateX(375px);
+    position: absolute;
     opacity: 0;
-    .select {
-      //Style
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: $color-base;
-      margin-left: auto;
-      margin-top: 58px;
-      width: 350px;
-      height: 50px;
-      font-family: "caviar", sans-serif;
+    h2 {
+      font-family: "caviarbold", sans-serif;
       text-transform: uppercase;
-      color: white;
-      font-size: $p;
-      text-decoration: none;
-      cursor: pointer;
-      animation-name: transform;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-out;
-      &:hover {
-        transform: translateX(15px);
-      }
+      font-size: 48px;
+      padding-bottom: 82px;
+    }
+    p {
+      font-family: "caviar", sans-serif;
+      width: 364px;
+      text-align: justify;
+      font-size: $p-bold;
     }
   }
 }
