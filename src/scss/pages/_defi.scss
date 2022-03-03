@@ -1,3 +1,26 @@
+.return {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-base;
+  margin-top: 58px;
+  width: 350px;
+  height: 50px;
+  font-family: "caviar", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: $p;
+  text-decoration: none;
+  cursor: pointer;
+  transition-property: transform, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  position: absolute;
+  &:hover {
+    transform: translateX(15px);
+  }
+}
 .defis {
   display: flex;
   margin: auto;
