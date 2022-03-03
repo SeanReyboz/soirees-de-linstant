@@ -1,8 +1,6 @@
 .body-test-carte {
-  .return {
-    position: absolute;
-    top: -46px;
-    right: 10px;
+  .return,
+  .godefi {
     border: none;
     display: flex;
     align-items: center;
@@ -24,5 +22,16 @@
     &:hover {
       transform: translateX(15px);
     }
+  }
+  .return {
+    position: absolute;
+    top: -46px;
+    right: 10px;
+  }
+  .godefi {
+    position: relative;
+    margin-top: 355px;
+    margin-left: 500px;
+    opacity: 0;
   }
 }

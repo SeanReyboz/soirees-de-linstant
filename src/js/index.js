@@ -262,15 +262,32 @@ $(document).ready(function () {
       $(".main").addClass("translate");
       done = 1;
     } else if (done == 1) {
+      var cardrand = Math.floor(Math.random() * 4);
       gsap.to("." + response, {
         duration: 1,
         rotation: 0,
         rotationY: 180,
-
         delay: 0.1,
       });
       setTimeout(() => {
-        document.querySelector("." + response).src = "./images/pique_card.svg";
+        if (cardrand == 0) {
+          document.querySelector("." + response).src =
+            "./images/pique_card.png";
+          gsap.to(".godefi", {
+            duration: 1,
+            opacity: 1,
+            delay: 0.5,
+          });
+        } else if (cardrand == 1) {
+          document.querySelector("." + response).src =
+            "./images/coeur_card.png";
+        } else if (cardrand == 2) {
+          document.querySelector("." + response).src =
+            "./images/carreau_card.png";
+        } else if (cardrand) {
+          document.querySelector("." + response).src =
+            "./images/trefle_card.png";
+        }
       }, 1100);
     }
   });
