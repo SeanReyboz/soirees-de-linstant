@@ -60,6 +60,8 @@ document.querySelector(".select").addEventListener("click", function () {
 
   //Vérification si la roulette à déjà été lancé
   if (done == 0) {
+    document.querySelector(".select").setAttribute("disabled", "");
+    document.querySelector(".select").style.backgroundColor = "black";
     //Tirage random en 360 degres et 3600 degres
     var tour = Math.floor(Math.random() * 3600) + 360;
     //Tirage random du défi qui apparaitras
@@ -97,7 +99,13 @@ document.querySelector(".select").addEventListener("click", function () {
     });
 
     done = 1;
+    setTimeout(() => {
+      document.querySelector(".select").removeAttribute("disabled", "");
+      document.querySelector(".select").style.backgroundColor = "#ed0202";
+    }, 10000);
   } else if (done == 1) {
+    document.querySelector(".select").setAttribute("disabled", "");
+    document.querySelector(".select").style.backgroundColor = "black";
     //Tirage random en 360 degres et 3600 degres
     var tour = Math.floor(Math.random() * 3600) + 360;
     //Tirage random du défi qui apparaitras
@@ -124,5 +132,9 @@ document.querySelector(".select").addEventListener("click", function () {
       ease: "expo",
       delay: 6.8,
     });
+    setTimeout(() => {
+      document.querySelector(".select").removeAttribute("disabled", "");
+      document.querySelector(".select").style.backgroundColor = "#ed0202";
+    }, 8000);
   }
 });

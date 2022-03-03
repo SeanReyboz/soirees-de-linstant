@@ -15,13 +15,14 @@
     }
   }
   .dynamic {
-    //Pour animation js
     width: 350px;
     .seldefi {
+      //Pour animation js
       transform: translateX(-1000px);
       opacity: 0;
       .select {
         //Style
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,7 +36,7 @@
         font-size: $p;
         text-decoration: none;
         cursor: pointer;
-        animation-name: transform;
+        transition-property: transform, background-color;
         transition-duration: 0.2s;
         transition-timing-function: ease-out;
         &:hover {
