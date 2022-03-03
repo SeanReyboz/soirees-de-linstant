@@ -53,5 +53,24 @@ $(document).ready(function () {
 
         }
     })
+    $(".carte").click(function () {
+        var getClass = this.className;
+        var response = getClass.substring(6, 8);
+        console.log(response);
+        if ($(".carte").attr("class") != "carte " + response) {
 
+        }
+        $(".carte").css({
+            display: "none",
+            visibility: "hidden",
+            oppacity: 0
+        });
+        $("." + response).css({
+            display: "block",
+            visibility: 'visible',
+            oppacity: 1
+        });
+        $(".main").addClass("translate");
+
+    })
 });
