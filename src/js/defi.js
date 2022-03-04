@@ -28,6 +28,9 @@ var defis = [
   "Refais un morceau ou un instant qui vient d'avoir lieu dans la soirée",
 ];
 
+//Liste des animations possible
+var animation = ["power1", "power2", "back", "circ", "sine"];
+
 /**************** Apparitions ****************/
 
 //Apparition carte
@@ -114,11 +117,12 @@ document.querySelector(".select").addEventListener("click", function () {
     var tour = Math.floor(Math.random() * 3600) + 360;
     //Tirage random du défi qui apparaitras
     var defi = Math.floor(Math.random() * (defis.length - 1));
-
+    //Tirage random de l'animation qu'il y aura
+    var anim = Math.floor(Math.random() * (animation.length - 1));
     gsap.to(".roulette", {
       duration: 6,
       rotation: tour,
-      ease: "back",
+      ease: animation[anim],
       delay: 0.8,
     });
     gsap.to(".defi", {
