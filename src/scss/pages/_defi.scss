@@ -33,7 +33,6 @@
   .static {
     display: flex;
     justify-content: space-between;
-
     .card {
       width: 220px;
       transform: translateX(-500px);
@@ -95,8 +94,87 @@
     p {
       font-family: "caviar", sans-serif;
       width: 364px;
-      text-align: justify;
       font-size: $p-bold;
     }
   }
 }
+@media screen and(max-width: 1024px) {
+  .respon {
+    width: unset;
+    .return {
+      transform: scale(0.6);
+      bottom: 0;
+      top: unset;
+      right: -58px;
+    }
+    .defis {
+      transform: scale(0.8);
+      position: relative;
+      top: -38px;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .respon {
+    width: unset;
+    .return {
+      transform: scale(0.6);
+      bottom: 0;
+      top: unset;
+      right: -58px;
+    }
+    .defis {
+      transform: scale(0.65);
+      position: relative;
+      top: -58px;
+    }
+  }
+}
+/*
+@media screen and(max-width: 480px) {
+  .respon {
+    width: unset;
+    justify-content: center;
+    .return {
+      transform: scale(0.8);
+      right: -28px;
+      bottom: 0;
+      top: unset;
+      &:hover {
+      }
+    }
+    .defis {
+      position: relative;
+      transform: scale(0.6);
+      top: -144px;
+      flex-direction: column;
+      width: 350px;
+      .static {
+        margin: auto;
+        margin-bottom: 50px;
+        .card {
+        }
+      }
+      .dynamic {
+        .seldefi {
+          .select {
+            &:hover {
+            }
+          }
+        }
+        .roue {
+          .pique {
+          }
+        }
+      }
+      .defi {
+        h2 {
+        }
+        p {
+        }
+      }
+    }
+  }
+}
+*/
