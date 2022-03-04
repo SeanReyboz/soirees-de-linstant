@@ -1,136 +1,130 @@
 .InstantHouse {
-    font-family: "caviar", sans-serif;
-    display: block;
-    .heading {
-        font-size: $h1;
-        text-transform: capitalize;
-        div {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-        }
-        .underline{
-            background-color: $color-gray;
-            min-height: 9px;
-            opacity: 75%;
-            margin-bottom: 150px;
-        }
+  font-family: "caviar", sans-serif;
+  display: block;
+  .heading {
+    font-size: $h1;
+    text-transform: capitalize;
+    div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
     }
-    .question {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        .response{
-            
-            display: flex;
-            position: absolute;
-            bottom: 0;
-            .carte {
-                min-width: 280px;
-                min-height: 425px;
-                cursor: pointer;
-                background-image: url(../images/card_border.svg);
-                background-repeat: no-repeat;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: -25px;
-                P{ 
-                    max-width: 200px;
-                    color: white;
-            }
-                &.c1 {
-                  transform: translateY(40px) rotate(-10.93deg);
-                    z-index: 1;
-                    &:hover {
-                      transform: translateY(-100px) rotate(-10.93deg);
-                      z-index: 10;
-                    }
-                  }
-                  &.c2 {
-                    z-index: 2;
-                  transform: translateY(10px) rotate(-0.37deg);
-                    &:hover {
-                      transform: translateY(-100px) rotate(-0.37deg);
-                      z-index: 10;
-                    }
-                  }
-                  &.c3 {
-                    z-index: 3;
-                    transform: translateY(10px) rotate(0.37deg);
-                    &:hover {
-                      transform: translateY(-100px) rotate(0.37deg);
-                      z-index: 10;
-                    }
-                  }
-                  &.c4 {
-                    z-index: 4;
-                    transform: translateY(40px) rotate(10.93deg);
-                    &:hover {
-                      transform: translateY(-100px) rotate(10.93deg);
-                      z-index: 10;
-                    }
-                  }
-        }
-        }
-       &._0{
-        display: block ;
-        visibility: visible ;
-        opacity: 1 ;
-    } 
+    .underline {
+      background-color: $color-gray;
+      min-height: 9px;
+      opacity: 75%;
+      margin-bottom: 150px;
     }
-    .resultat {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        .stats {
-            display: flex;
-            div {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+  }
+  .question {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    .response {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      .carte {
+        min-width: 280px;
+        min-height: 425px;
+        cursor: pointer;
+        background-image: url(../images/card_border.svg);
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -25px;
+        P {
+          max-width: 200px;
+          color: white;
+        }
+        &.c1 {
+          transform: translateY(40px) rotate(-10.93deg);
+          z-index: 1;
+          &:hover {
+            transform: translateY(-100px) rotate(-10.93deg);
+            z-index: 10;
+          }
+        }
+        &.c2 {
+          z-index: 2;
+          transform: translateY(10px) rotate(-0.37deg);
+          &:hover {
+            transform: translateY(-100px) rotate(-0.37deg);
+            z-index: 10;
+          }
+        }
+        &.c3 {
+          z-index: 3;
+          transform: translateY(10px) rotate(0.37deg);
+          &:hover {
+            transform: translateY(-100px) rotate(0.37deg);
+            z-index: 10;
+          }
+        }
+        &.c4 {
+          z-index: 4;
+          transform: translateY(40px) rotate(10.93deg);
+          &:hover {
+            transform: translateY(-100px) rotate(10.93deg);
+            z-index: 10;
+          }
+        }
+      }
+    }
+    &._0 {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .resultat {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    .stats {
+      display: flex;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .carte {
-            
-            min-width: 280px;
-            min-height: 425px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            P{ 
-                max-width: 200px;
-                color: white;
+          min-width: 280px;
+          min-height: 425px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          P {
+            max-width: 200px;
+            color: white;
+          }
+          &.c1,
+          &.c2,
+          &.c3,
+          &.c4 {
+            width: 280px;
+            height: 425px;
+          }
         }
-            &.c1,
-            &.c2,
-            &.c3,
-            &.c4 {
-                
-                width: 280px;
-                height: 425px;
-                }
-              
-        }
+      }
     }
+    .description {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 25px;
     }
-    .description{
-        text-align: center;
-        font-weight: bold;
-        margin-top: 25px;
-    }
-    }
+  }
 }
 .fadeIn {
-    animation: fadeIn 250ms ease-in;
-
+  animation: fadeIn 250ms ease-in;
 }
 
 @keyframes fadeIn {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-    
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
